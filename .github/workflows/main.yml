@@ -24,6 +24,8 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    - name: Check Java version  # New step to confirm Java version
+      run: java -version
 
     - name: Cache Gradle dependencies
       uses: actions/cache@v2
