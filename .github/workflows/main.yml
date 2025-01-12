@@ -22,7 +22,7 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '11'  # Specify the version of Java to use
-        distribution: 'adoptopenjdk'
+        distribution: 'temurin'  # Use the Temurin distribution for JDK
 
     - name: Cache Maven dependencies
       uses: actions/cache@v2
@@ -46,7 +46,7 @@ jobs:
         docker push your-dockerhub-username/demo-app:latest
 
     - name: Upload build artifacts (optional)
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3  # Updated version of upload-artifact
       with:
         name: demo-app-artifact
         path: target/demo-0.0.1-SNAPSHOT.jar
