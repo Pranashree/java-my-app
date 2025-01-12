@@ -43,7 +43,7 @@ jobs:
 
     - name: Build Docker Image
       run: |
-        docker build -t your-dockerhub-username/demo-app ./Dockerfile
+        docker build -t your-dockerhub-username/demo-app /Dockerfile
         docker tag your-dockerhub-username/demo-app your-dockerhub-username/demo-app:latest
         echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
         docker push your-dockerhub-username/demo-app:latest
