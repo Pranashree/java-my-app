@@ -26,3 +26,8 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+// Specify the main class for Spring Boot
+bootJar {
+    mainClassName = 'com.example.demo.DemoApplication'  // Update to reflect your main class
+}
